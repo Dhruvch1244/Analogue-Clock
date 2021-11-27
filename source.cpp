@@ -9,15 +9,16 @@ int hr,sec,min;
 
 void drawClock(int xc,int yc)
 {
-int i,inr=80,outr=100;
+int i,inr=70,outr=80,midc=60;
 int hdeg,mindeg,secdeg,x,y;
 circle(xc,yc,outr);
-setfillstyle(SOLID_FILL,WHITE);
-fillellipse(xc,yc,5,5);
+circle(xc,yc,midc);
+setfillstyle(SOLID_FILL,BLUE);
+fillellipse(xc,yc,12,12);
 for(i=180;i>-360;i-=6)
 {
 if(i%5==0)
-fillellipse(xc+inr*sin(i*3.14f/180),yc+inr*cos(i*3.14f/180),1,1);
+fillellipse(xc+inr*sin(i*3.14f/180),yc+inr*cos(i*3.14f/180),4,4);
 
 else
 fillellipse(xc+inr*sin(i*3.14f/180),yc+inr*cos(i*3.14f/180),1,1);
@@ -71,3 +72,4 @@ min=tmin;
 }
 return 0;
 }
+
